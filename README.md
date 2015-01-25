@@ -17,7 +17,6 @@ http://blog.encausse.net/s-a-r-a-h/
 
 ## Sharp Aquos IP Control Setup
 
-Pour que vous puissiez controler votre TV Aquos via IP :
 1. Allez dans 'Setup'
 2. Naviguez jusqu'à 'View Setting'
 3. Naviguez jusqu'à 'Control Setting'
