@@ -3,13 +3,17 @@
       <example>Sarah allume la télé</example>
       <tag>out.action=new Object(); </tag>
 
-<!-- Fichier XML du Plugin AquosRemote pour SARAH
+<!--  Fichier XML du Plugin AquosRemote pour SARAH
+      (by Jérôme Garcia Miranda & Phil Bri)
 -->
 
       <item>Sarah
          <one-of>
             <item>Allume la télé
-               <tag>out.action.key="@MAIN:PWR=On"; out.action.ttsAction="l'ampli est allumé"; </tag>
+               <tag>out.action.cmd="POWR1"; out.action.ttsAction="la télé est allumée"; </tag>
+            </item>
+            <item>Eteinds la télé
+               <tag>out.action.cmd="POWR0"; out.action.ttsAction="La télé est éteinte";</tag>
             </item>
          </one-of>
       </item>

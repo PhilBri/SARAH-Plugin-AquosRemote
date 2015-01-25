@@ -1,11 +1,11 @@
 {
 	"modules" : {
 		"AquosRemote"  : {
-			"description": "SARAH controle les TV Sharp Aquos",
-			"version" : "0.1",
-			"Aquos_IP" : "",
-			"Aquos_User" : "",
-			"Aquos_Password" : ""
+			"Description": "SARAH controle les TV Sharp Aquos",
+			"Version" : "0.1",
+			"IP" : "",
+			"User" : "",
+			"password" : ""
 		}
 	}
 }
