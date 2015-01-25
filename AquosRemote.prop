@@ -4,6 +4,7 @@
 			"Description": "SARAH controle les TV Sharp Aquos",
 			"Version" : "0.1",
 			"IP" : "",
+			"Port" : "",
 			"User" : "",
 			"password" : ""
 		}

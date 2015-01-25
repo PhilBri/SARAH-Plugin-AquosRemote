@@ -16,7 +16,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 	if ( !config.IP ){
 		console.log( "\nAquosRemote [Erreur] => IP non configurée !" );
-		return callback ({ 'tts' : 'Adresse I P incorrecte !' });
+		return; callback ({ 'tts' : 'Adresse I P incorrecte !' });
 	}
 
 	Aquos.IP 		= config.IP,
@@ -24,44 +24,43 @@ exports.action = function ( data , callback , config , SARAH ) {
 	Aquos.User 		= ( typeof config.User != 'undefined' ) ? config.User : false,
 	Aquos.password 	= ( typeof config.password != 'undefined' ) ? config.password : false;
 
-	var socket = net.connect ({ host: Aquos.IP, port: Aquos.Port },function () {
+	var socket = net.connect ({ host: Aquos.IP, port: Aquos.Port });
 
-		socket.on ( 'connect', function() {
-			console.log ( '\nAquosRemote => Connexion = [OK]');
-		});
+	socket.on ( 'connect', function() {
+		console.log ( '\nAquosRemote => Connexion = [OK]');
+	});
 
-		socket.on ( 'data', function ( data ) {
-			Aquos.Data = data.toString();
+	socket.on ( 'data', function ( data ) {
+		Aquos.Data = data.toString();
 
-			// Debug
-			console.log ( '\n--------- Valeur à communiquer (ci-dessous) ----------');
-			console.log (Aquos);
-			console.log ( '------------------------------------------------------\n');
-			// End debug
+		// Debug
+		console.log ( '\n--------- Valeur à communiquer (ci-dessous) ----------');
+		console.log (Aquos);
+		console.log ( '------------------------------------------------------\n');
+		// End debug
 
-			if ( Aquos.Data.indexOf( "Login" ) != -1 ) {
-				if ( !Aquos.User || !Aquos.password) {
-					socket.destroy();
-					console.log ( '\nAquosRemote [Erreur] => User et/ou Password absents' );
-					return callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe absent." });
-				}
-				else socket.write ( Aquos.Username + "\n" + Aquos.password + "\n" );
+		if ( Aquos.Data.indexOf( "Login" ) != -1 ) {
+			if ( !Aquos.User || !Aquos.password ) {
+				socket.destroy();
+				console.log ( '\nAquosRemote [Erreur] => User et/ou Password absents' );
+				return callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe absent." });
 			}
-			if ( Aquos.Data.indexOf( "OK" ) != -1 ) {
-				socket.end (data.cmd + "   \x0D" );
-				console.log ( '\nAquosRemote => Cmd = [OK]');
-				callback ({ "tts" : data.ttsAction });
-			}
-			if ( Aquos.Data.indexOf( "User Name or Password mismatch" ) != -1 ) {
-					socket.destroy();
-					console.log ( '\nAquosRemote [Erreur] => User et/ou Password incorrects' );
-					return callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe incorrects." });
-			}
-		});
+			else socket.write ( Aquos.Username + "\n" + Aquos.password + "\n" );
+		}
+		if ( Aquos.Data.indexOf( "OK" ) != -1 ) {
+			socket.end (data.cmd + "   \x0D" );
+			console.log ( '\nAquosRemote => Cmd = [OK]');
+			callback ({ "tts" : data.ttsAction });
+		}
+		if ( Aquos.Data.indexOf( "User Name or Password mismatch" ) != -1 ) {
+			socket.destroy();
+			console.log ( '\nAquosRemote [Erreur] => User et/ou Password incorrects' );
+			return; callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe incorrects." });
+		}
+	});
 
-		socket.on ( 'error', function ( 'erreur') {
-			console.log ( '\nAquosRemote [Erreur] => ' + erreur );
-			return callback ({ 'tts' : 'Erreur de connexion !'});
-		});
+	socket.on ( 'error', function ( erreur) {
+		console.log ( '\nAquosRemote [Erreur] => ' + erreur );
+		return;// callback ({ 'tts' : 'Erreur de connexion !'});
 	});
 }

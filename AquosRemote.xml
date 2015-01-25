@@ -9,12 +9,183 @@
 
       <item>Sarah
          <one-of>
+<!-- Power -->
             <item>Allume la télé
                <tag>out.action.cmd="POWR1"; out.action.ttsAction="la télé est allumée"; </tag>
             </item>
             <item>Eteints la télé
                <tag>out.action.cmd="POWR0"; out.action.ttsAction="La télé est éteinte";</tag>
             </item>
+<!-- Sleep Power -->
+            <item>Met la télé en veille
+               <tag>out.action.cmd="RSPW2"; out.action.ttsAction="la télé passe en veille"; </tag>
+            </item>
+            <item>Active la télé
+               <tag>out.action.cmd="RSPW1"; out.action.ttsAction="la télé est active"; </tag>
+            </item>
+<!-- Muting -->
+            <item>Coupe le son de la télé
+               <tag>out.action.cmd="MUTE1"; out.action.ttsAction="Le son de la télé est coupé"; </tag>
+            </item>
+            <item>Remet le son de la télé
+               <tag>out.action.cmd="MUTE2"; out.action.ttsAction="Le son de la télé est remis"; </tag>
+            </item>
+<!-- Channels -->
+            <item>Met la chaîne suivante
+               <tag>out.action.cmd="CHUP "; out.action.ttsAction="La chaîne suivante est affichée"; </tag>
+            </item>
+            <item>Met la chaîne précédente
+               <tag>out.action.cmd="CHDW "; out.action.ttsAction="La chaîne précédente est affichée"; </tag>
+            </item>
+<!-- Inputs -->
+            <item>Sélectionne l'entrée suivante
+               <tag>out.action.cmd="ITGD "; out.action.ttsAction="L'entrée suivante est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée T V
+               <tag>out.action.cmd="ITVD "; out.action.ttsAction="L'entrée T V est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée direct T V
+               <tag>out.action.cmd="IDTV "; out.action.ttsAction="L'entrée direct T V est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée extérieure un
+               <tag>out.action.cmd="IAVD1"; out.action.ttsAction="L'entrée extérieure 1 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée extérieure 2
+               <tag>out.action.cmd="IAVD2"; out.action.ttsAction="L'entrée extérieure 2 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée H D M I un
+               <tag>out.action.cmd="IAVD4"; out.action.ttsAction="L'entrée H D M I 1 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée H D M I 2
+               <tag>out.action.cmd="IAVD5"; out.action.ttsAction="L'entrée H D M I 2 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée H D M I 3
+               <tag>out.action.cmd="IAVD6"; out.action.ttsAction="L'entrée H D M I 3 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée H D M I 4
+               <tag>out.action.cmd="IAVD7"; out.action.ttsAction="L'entrée H D M I 4 est séléctionnée"; </tag>
+            </item>
+            <item>Sélectionne l'entrée P C
+               <tag>out.action.cmd="IAVD8"; out.action.ttsAction="L'entrée P C est séléctionnée"; </tag>
+            </item>
+<!-- AV Modes -->
+            <item>Sélectionne le mode suivant
+               <tag>out.action.cmd="AVMD0"; out.action.ttsAction="Le mode suivant est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode standard
+               <tag>out.action.cmd="AVMD1"; out.action.ttsAction="Le mode standard est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode film
+               <tag>out.action.cmd="AVMD2"; out.action.ttsAction="Le mode film est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode jeux
+               <tag>out.action.cmd="AVMD3"; out.action.ttsAction="Le mode jeux est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode personnalisé
+               <tag>out.action.cmd="AVMD4"; out.action.ttsAction="Le mode personnalisé est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode dynamique fixe
+               <tag>out.action.cmd="AVMD5"; out.action.ttsAction="Le mode dynamique fixe est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode dynamique
+               <tag>out.action.cmd="AVMD6"; out.action.ttsAction="Le mode dynamique est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode P C
+               <tag>out.action.cmd="AVMD7"; out.action.ttsAction="Le mode P C est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode X V couleur
+               <tag>out.action.cmd="AVMD8"; out.action.ttsAction="Le mode X V couleur est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode 3 D
+               <tag>out.action.cmd="AVMD15"; out.action.ttsAction="Le mode 3D est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode jeux 3 D
+               <tag>out.action.cmd="AVMD16"; out.action.ttsAction="Le mode jeux 3 D est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode T H X
+               <tag>out.action.cmd="AVMD17"; out.action.ttsAction="Le mode T H X est séléctionné"; </tag>
+            </item>
+            <item>Sélectionne le mode auto
+               <tag>out.action.cmd="AVMD100"; out.action.ttsAction="Le mode auto est séléctionné"; </tag>
+            </item>
+<!-- Toggles -->
+            <item>Touche haut
+               <tag>out.action.cmd="RCKY41"; out.action.ttsAction="Touche haut"; </tag>
+            </item>
+            <item>Touche bas
+               <tag>out.action.cmd="RCKY42"; out.action.ttsAction="Touche bas"; </tag>
+            </item>
+            <item>Touche gauche
+               <tag>out.action.cmd="RCKY43"; out.action.ttsAction="Touche gauche"; </tag>
+            </item>
+            <item>Touche droite
+               <tag>out.action.cmd="RCKY44"; out.action.ttsAction="Touche droite"; </tag>
+            </item>
+            <item>Touche zéro
+               <tag>out.action.cmd="RCKY0"; out.action.ttsAction="Touche 0"; </tag>
+            </item>
+            <item>Touche 1
+               <tag>out.action.cmd="RCKY1"; out.action.ttsAction="Touche 1"; </tag>
+            </item>
+            <item>Touche 2
+               <tag>out.action.cmd="RCKY2"; out.action.ttsAction="Touche 2"; </tag>
+            </item>
+            <item>Touche 3
+               <tag>out.action.cmd="RCKY3"; out.action.ttsAction="Touche 3"; </tag>
+            </item>
+            <item>Touche 4
+               <tag>out.action.cmd="RCKY4"; out.action.ttsAction="Touche 4"; </tag>
+            </item>
+            <item>Touche 5
+               <tag>out.action.cmd="RCKY5"; out.action.ttsAction="Touche 5"; </tag>
+            </item>
+            <item>Touche 6
+               <tag>out.action.cmd="RCKY6"; out.action.ttsAction="Touche 6"; </tag>
+            </item>
+            <item>Touche 7
+               <tag>out.action.cmd="RCKY7"; out.action.ttsAction="Touche 7"; </tag>
+            </item>
+            <item>Touche 8
+               <tag>out.action.cmd="RCKY8"; out.action.ttsAction="Touche 8"; </tag>
+            </item>
+            <item>Touche 9
+               <tag>out.action.cmd="RCKY9"; out.action.ttsAction="Touche 9"; </tag>
+            </item>
+            <item>Touche point
+               <tag>out.action.cmd="RCKY10"; out.action.ttsAction="Touche point"; </tag>
+            </item>
+            <item>Touche menu
+               <tag>out.action.cmd="RCKY38"; out.action.ttsAction="Touche menu"; </tag>
+            </item>
+            <item>Touche entrée
+               <tag>out.action.cmd="RCKY40"; out.action.ttsAction="Touche entrée"; </tag>
+            </item>
+            <item>Touche retour
+               <tag>out.action.cmd="RCKY45"; out.action.ttsAction="Touche retour"; </tag>
+            </item>
+            <item>Touche info
+               <tag>out.action.cmd="RCKY13"; out.action.ttsAction="Touche info"; </tag>
+            </item>
+            <item>Touche sortie
+               <tag>out.action.cmd="RCKY46"; out.action.ttsAction="Touche sortie"; </tag>
+            </item>
+            <item>Touche rouge
+               <tag>out.action.cmd="RCKY50"; out.action.ttsAction="Touche rouge"; </tag>
+            </item>
+            <item>Touche verte
+               <tag>out.action.cmd="RCKY51"; out.action.ttsAction="Touche verte"; </tag>
+            </item>
+            <item>Touche bleue
+               <tag>out.action.cmd="RCKY52"; out.action.ttsAction="Touche bleue"; </tag>
+            </item>
+            <item>Touche jaune
+               <tag>out.action.cmd="RCKY53"; out.action.ttsAction="Touche jaune"; </tag>
+            </item>
+<!-- Various -->
+            <item>Affiche la chaîne favorite
+               <tag>out.action.cmd="RCKY47"; out.action.ttsAction="Chaîne favorite affichée; </tag>
+            </item>
+
          </one-of>
       </item>
       <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/AquosRemote";</tag>
