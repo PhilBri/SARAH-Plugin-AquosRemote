@@ -1,4 +1,4 @@
-# AquosRemote
+# [AquosRemote]
 
 Plugin for S.A.R.A.H. project by JP Encausse
 http://blog.encausse.net/s-a-r-a-h/
@@ -6,13 +6,13 @@ http://blog.encausse.net/s-a-r-a-h/
 
 ## Sharp Aquos TV Setup
 
-1. Vérifiez que le téléviseur est sur on.
+1. Vérifiez que le téléviseur est sur 'on'.
 2. Appuyez sur le bouton Menu.
-3. Naviguez jusqu'à 'Initial Setup' - validez
-4. Naviguez jusqu'à 'Internet Setup' - validez
-5. Naviguez jusqu'à 'Aquos Remote Control' - validez
-6. Sélectionnez la fonctionnalité 'Remote Control functionality'
-7. Entrez dans 'Detailed Settings' et choississez un username/password.
+3. Naviguez jusqu'à 'Initial Setup'
+4. Naviguez jusqu'à 'Internet Setup'
+5. Naviguez jusqu'à 'Aquos Remote Control'
+6. Sélectionnez 'Remote Control functionality'
+7. Entrez dans 'Detailed Settings' et saisissez un username/password.
 
 
 ## AquosRemote Setup
@@ -22,10 +22,11 @@ http://marketplace.sarah.encausse.net/store
 
 Démarrez SARAH et lancez l'interface Web du client http://127.0.0.1:8080/home
 
-Dans le portlet de AquosRemote, renseignez les champs suivants :
-- Aquos_IP = 'ip de votre téléviseur'
-- Aquos_User = 'Le nom d'utilisateur que vous avez choisi'
-- Aquos_Password = 'Le mot de passe que vous avez choisi'
+Dans le portlet AquosRemote, renseignez les champs suivants :
+- IP = 'ip de votre téléviseur'.
+- Port = 'Laissez le champ vide sauf si vous changez le port par defaut (10002)'.
+- User = 'Nom d'utilisateur que vous avez choisi'.
+- Password = 'Mot de passe que vous avez choisi'.
 
 
 ## AquosRemote Examples
