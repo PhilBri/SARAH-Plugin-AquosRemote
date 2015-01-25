@@ -15,6 +15,22 @@ http://blog.encausse.net/s-a-r-a-h/
 7. Entrez dans 'Detailed Settings' et saisissez un username/password.
 
 
+## Sharp Aquos IP Control Setup
+
+Pour que vous puissiez controler votre TV Aquos via IP :
+1. Allez dans 'Setup'
+2. Naviguez jusqu'à 'View Setting'
+3. Naviguez jusqu'à 'Control Setting'
+4. Naviguez jusqu'à 'Change'
+5. Selectionnez 'Enable'
+6. 'Detail Setting' Renseignez votre User et Password
+7. Entrez le port à utiliser avec le controle via ip (defaut 10002)
+8. Confirmez les 'Settings' et terminez en pressant 'OK'
+
+L'ensemble peut être consulté ici (Page 62 - 63) :
+http://www.sharp-cee.com/cps/rde/xbcr/documents/documents/Marketing/Operational_manuals/LC60_70_80_UQ10E_EN_KN_eu3_gb.pdf
+
+
 ## AquosRemote Setup
 
 Téléchargez le plugin AquosRemote sur le MarketPlace de SARAH
