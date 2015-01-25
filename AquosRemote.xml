@@ -1,0 +1,19 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleAquosRemote" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+   <rule id="ruleAquosRemote" scope="public">
+      <example>Sarah allume la télé</example>
+      <tag>out.action=new Object(); </tag>
+
+<!-- Fichier XML du Plugin AquosRemote pour SARAH
+-->
+
+      <item>Sarah
+         <one-of>
+            <item>Allume la télé
+               <tag>out.action.key="@MAIN:PWR=On"; out.action.ttsAction="l'ampli est allumé"; </tag>
+            </item>
+         </one-of>
+      </item>
+      <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/AquosRemote";</tag>
+   </rule>
+</grammar>
+
