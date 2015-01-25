@@ -11,18 +11,20 @@
 exports.action = function ( data , callback , config , SARAH ) {
 
 	var net = require ( 'net' ),
-		config = cfg.modules.AquosRemote,
+		cfg = config.modules.AquosRemote,
 		Aquos = {};
 
-	if ( !config.IP ){
+	if ( !cfg.IP ){
 		console.log( "\nAquosRemote [Erreur] => IP non configurée !" );
-		return; callback ({ 'tts' : 'Adresse I P incorrecte !' });
+		return callback ({ 'tts' : 'Adresse I P incorrecte !' });
 	}
 
-	Aquos.IP 		= config.IP,
-	Aquos.Port 		= ( typeof config.Port != 'undefined' ) ? config.Port : 10002,
-	Aquos.User 		= ( typeof config.User != 'undefined' ) ? config.User : false,
-	Aquos.password 	= ( typeof config.password != 'undefined' ) ? config.password : false;
+	Aquos.IP 		= cfg.IP,
+	Aquos.Port 		= ( typeof cfg.Port != 'undefined' ) ? cfg.Port : 10002,
+	Aquos.User 		= ( typeof cfg.User != 'undefined' ) ? cfg.User : false,
+	Aquos.password 	= ( typeof cfg.password != 'undefined' ) ? cfg.password : false;
+	
+	data.cmd = data.cmd.concat( '    ' ).substr(0,8) + '\x0D';
 
 	var socket = net.connect ({ host: Aquos.IP, port: Aquos.Port });
 
@@ -48,19 +50,19 @@ exports.action = function ( data , callback , config , SARAH ) {
 			else socket.write ( Aquos.Username + "\n" + Aquos.password + "\n" );
 		}
 		if ( Aquos.Data.indexOf( "OK" ) != -1 ) {
-			socket.end (data.cmd + "   \x0D" );
+			socket.end ( data.cmd );
 			console.log ( '\nAquosRemote => Cmd = [OK]');
 			callback ({ "tts" : data.ttsAction });
 		}
 		if ( Aquos.Data.indexOf( "User Name or Password mismatch" ) != -1 ) {
 			socket.destroy();
 			console.log ( '\nAquosRemote [Erreur] => User et/ou Password incorrects' );
-			return; callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe incorrects." });
+			return callback ({ "tts" : "Erreur d'authentification. Nom d'utilisateur et ou mot de passe incorrects." });
 		}
 	});
 
 	socket.on ( 'error', function ( erreur) {
 		console.log ( '\nAquosRemote [Erreur] => ' + erreur );
-		return;// callback ({ 'tts' : 'Erreur de connexion !'});
+		return callback ({ 'tts' : 'Erreur de connexion !'});
 	});
 }
