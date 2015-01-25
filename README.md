@@ -31,6 +31,6 @@ Dans le portlet AquosRemote, renseignez les champs suivants :
 
 ## AquosRemote Examples
 
-"SARAH allume la télé".
-"SARAh éteinds la télé".
+- "SARAH allume la télé".
+- "SARAh éteints la télé".
 

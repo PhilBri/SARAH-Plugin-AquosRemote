@@ -12,7 +12,7 @@
             <item>Allume la télé
                <tag>out.action.cmd="POWR1"; out.action.ttsAction="la télé est allumée"; </tag>
             </item>
-            <item>Eteinds la télé
+            <item>Eteints la télé
                <tag>out.action.cmd="POWR0"; out.action.ttsAction="La télé est éteinte";</tag>
             </item>
          </one-of>
