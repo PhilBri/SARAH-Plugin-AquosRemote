@@ -32,20 +32,20 @@
             </item>
 <!-- Channels -->
             <item>Met la chaîne suivante
-               <tag>out.action.cmd="CHUP "; out.action.ttsAction="La chaîne suivante est affichée"; </tag>
+               <tag>out.action.cmd="CHUP"; out.action.ttsAction="La chaîne suivante est affichée"; </tag>
             </item>
             <item>Met la chaîne précédente
-               <tag>out.action.cmd="CHDW "; out.action.ttsAction="La chaîne précédente est affichée"; </tag>
+               <tag>out.action.cmd="CHDW"; out.action.ttsAction="La chaîne précédente est affichée"; </tag>
             </item>
 <!-- Inputs -->
             <item>Sélectionne l'entrée suivante
-               <tag>out.action.cmd="ITGD "; out.action.ttsAction="L'entrée suivante est séléctionnée"; </tag>
+               <tag>out.action.cmd="ITGD"; out.action.ttsAction="L'entrée suivante est séléctionnée"; </tag>
             </item>
             <item>Sélectionne l'entrée T V
-               <tag>out.action.cmd="ITVD "; out.action.ttsAction="L'entrée T V est séléctionnée"; </tag>
+               <tag>out.action.cmd="ITVD"; out.action.ttsAction="L'entrée T V est séléctionnée"; </tag>
             </item>
             <item>Sélectionne l'entrée direct T V
-               <tag>out.action.cmd="IDTV "; out.action.ttsAction="L'entrée direct T V est séléctionnée"; </tag>
+               <tag>out.action.cmd="IDTV"; out.action.ttsAction="L'entrée direct T V est séléctionnée"; </tag>
             </item>
             <item>Sélectionne l'entrée extérieure un
                <tag>out.action.cmd="IAVD1"; out.action.ttsAction="L'entrée extérieure 1 est séléctionnée"; </tag>

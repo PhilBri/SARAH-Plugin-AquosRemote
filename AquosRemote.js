@@ -37,7 +37,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 		// Debug
 		console.log ( '\n--------- Valeur à communiquer (ci-dessous) ----------');
-		console.log (Aquos);
+		console.log (Aquos.Data);
 		console.log ( '------------------------------------------------------\n');
 		// End debug
 
@@ -51,7 +51,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 		}
 		if ( Aquos.Data.indexOf( "OK" ) != -1 ) {
 			socket.end ( data.cmd );
-			console.log ( '\nAquosRemote => Cmd = [OK]');
+			console.log ( '\nAquosRemote => Cmd = [OK]' );
 			callback ({ "tts" : data.ttsAction });
 		}
 		if ( Aquos.Data.indexOf( "User Name or Password mismatch" ) != -1 ) {
@@ -61,8 +61,8 @@ exports.action = function ( data , callback , config , SARAH ) {
 		}
 	});
 
-	socket.on ( 'error', function ( erreur) {
+	socket.on ( 'error', function ( erreur ) {
 		console.log ( '\nAquosRemote [Erreur] => ' + erreur );
-		return callback ({ 'tts' : 'Erreur de connexion !'});
+		return callback ({ 'tts' : 'Erreur de connexion !' });
 	});
 }
