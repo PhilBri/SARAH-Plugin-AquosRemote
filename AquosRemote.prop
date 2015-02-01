@@ -1,7 +1,7 @@
 {
 	"modules" : {
 		"AquosRemote"  : {
-			"Description": "SARAH controle les TV Sharp Aquos",
+			"description": "SARAH controle les TV Sharp Aquos",
 			"Version" : "0.1",
 			"IP" : "",
 			"Port" : "",
