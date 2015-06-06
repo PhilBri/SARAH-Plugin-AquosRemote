@@ -21,15 +21,16 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 	Aquos.IP 		= cfg.IP,
 	Aquos.Port 		= ( typeof cfg.Port != 'undefined' ) ? cfg.Port : 10002,
-	Aquos.User 		= ( typeof cfg.User != 'undefined' ) ? cfg.User : false,
-	Aquos.password 	= ( typeof cfg.password != 'undefined' ) ? cfg.password : false;
+	Aquos.User 		= ( typeof cfg.User != 'undefined' ) ? cfg.User : 'admin',
+	Aquos.password 	= ( typeof cfg.password != 'undefined' ) ? cfg.password : 'admin';
 	
 	data.cmd = data.cmd.concat( '    ' ).substr(0,8) + '\x0D';
 
 	var socket = net.connect ({ host: Aquos.IP, port: Aquos.Port });
 
 	socket.on ( 'connect', function() {
-		console.log ( '\nAquosRemote => Connexion = [OK]');
+		console.log ( '\nAquosRemote => Connexion = [OK] => user: '+Aquos.Username+' - Password: '+Aquos.password);
+		socket.write ( Aquos.Username + "\n" + Aquos.password + "\n" );
 	});
 
 	socket.on ( 'data', function ( data ) {
